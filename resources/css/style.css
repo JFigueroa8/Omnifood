@@ -144,7 +144,7 @@ a:visited {
 
 a:hover,
 a:active {
-  color: #000;
+  color: #555;
   border-bottom: 1px solid transparent;
 }
 /* ========================================================================== */
@@ -215,6 +215,7 @@ header {
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
 }
 
@@ -230,7 +231,7 @@ header {
   height: 50px;
   width: auto;
   float: left;
-  margin-top: 5px 0;
+  margin: 5px 0;
 
 }
 
@@ -257,8 +258,8 @@ header {
   text-transform: uppercase;
   font-size: 90%;
   border-bottom: 2px solid transparent;
-  -webkit-transition: border-bottom 0.5s, color 0.5s;
-  transition: border-bottom 0.5s;
+  -webkit-transition: border-bottom 0.5s;
+          transition: border-bottom 0.5s;
 }
 
 .main-nav li a:hover,
@@ -298,8 +299,8 @@ header {
   z-index: 9999;
 }
 
-.sticky main-nav {
-  margin-top: 18px;
+.sticky .main-nav {
+  margin-top: 10px;
 }
 
 .sticky .main-nav li a:link,
@@ -354,16 +355,16 @@ header {
   width: 100%;
   height: auto;
   -webkit-transform: scale(1.15);
+      -ms-transform: scale(1.15);
           transform: scale(1.15);
-  -webkit-transition: opacity 0.5s, -webkit-transform 0.5s;
-  transition: opacity 0.5s, -webkit-transform 0.5s;
-  transition: transform 0.5s, opacity 0.5s;
-  transition: transform 0.5s, opacity 0.5s, -webkit-transform 0.5s;
+  -webkit-transition: -webkit-transform 0.5s, opacity 0.5s;
+          transition: transform 0.5s, opacity 0.5s;
 }
 
 .meal-photo img:hover {
   opacity: 1;
   -webkit-transform: scale(1.03);
+      -ms-transform: scale(1.03);
           transform: scale(1.03);
 }
 
@@ -372,15 +373,23 @@ header {
 /* ========================================================================== */
 
 .section-steps {
-  background-color: f4f4f4;
+  background-color: #f4f4f4;
 }
+
+/*TODO: Maybe delete*/
+.steps-box {
+  margin-top: 30px;
+}
+/*Maybe delete*/
+
 .steps-box:first-child {
   text-align: right;
   padding-right: 3%;
-  margin-top: 30px;
+  /* margin-top: 30px; */
 }
 
 .steps-box:last-child {
+  text-align: left; /*TODO: Maybe delete*/
   padding-left: 3%;
   margin-top: 70px;
 }
@@ -398,15 +407,16 @@ header {
 
 .works-step div {
   color: #e67e22;
+  font-size: 150%;
+  height: 54px;
+  width: 54px;
   border: 2px solid #e67e22;
   border-radius: 50%;
-  height: 55px;
-  width: 55px;
+  display: inline-block;
   text-align: center;
-  padding-top: 8px;
-  float: left;
-  font-size: 150%;
   margin-right: 25px;
+  float: left;
+  padding: 5px;
 }
 
 .btn-app:link,
@@ -454,19 +464,19 @@ blockquote {
   margin-top: 40px;
 }
 
+blockquote:before {
+  content: "\201C";
+  font-size: 500%;
+  display: block;
+  position: absolute;
+  top: -5px;
+  left: -5px;
+}
+
 cite {
   font-size: 90%;
   margin-top: 25px;
   display: block;
-}
-
-blockquote:before {
-  content: "\201C";
-  font-size: 500%;
-  display: inline;
-  position: absolute;
-  top: -5px;
-  left: -5px;
 }
 
 cite img {
@@ -493,6 +503,11 @@ cite img {
           box-shadow: 0 2px 2px #efefef;
 }
 
+.plan-box div {
+  padding: 15px;
+  border-bottom: 1px solid #e8e8e8;
+}
+
 .plan-box div:first-child {
   background-color: #fcfcfc;
   border-top-left-radius: 5px;
@@ -502,11 +517,6 @@ cite img {
 .plan-box div:last-child {
   text-align: center;
   border: 0;
-}
-
-.plan-box div {
-  padding: 15px;
-  border-bottom: 1px solid #e8e8e8;
 }
 
 .plan-price {
@@ -654,13 +664,17 @@ footer p {
 .js--wp-2,
 .js--wp-3 {
   opacity: 0;
-  animation-duration: 1s;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
 }
 
 .js--wp-4 {
-  animation-duration: 1s;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
 }
 
-.js--wp-1.animated{
+.js--wp-1.animated,
+.js--wp-2.animated,
+.js--wp-3.animated {
   opacity: 1;
 }
