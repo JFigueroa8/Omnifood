@@ -61,4 +61,19 @@ $(document).ready(function() {
     offset: '60%'
   });
 
+  /* Mobile nav*/
+
+  $('.js--nav-icon').click(function() {
+    var nav = $('.js--main-nav');
+    var icon = $('.js--nav-icon ion-icon');
+
+    if (icon.attr('name') === 'menu') {
+      icon.attr('name', 'close')
+    } else if (icon.attr('name') === 'close') {
+      icon.attr('name', 'menu')
+    }
+    nav.slideToggle(200);
+  
+  })
+
 });
