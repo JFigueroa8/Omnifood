@@ -165,6 +165,22 @@
     margin-bottom: 20px;
   }
 
+  .social-links {
+    float: left;
+    width: 100%;
+    text-align: center;
+  }
+
+  footer {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .footer-nav {
+    width: 100%;
+    text-align: center;
+  }
+
 }
 
 /*  Small phones: from 0 to 480px */
@@ -228,6 +244,27 @@
 
   .city-feature {
     margin-left: 25%
+  }
+
+  .social-links {
+    float: left;
+    padding-top: 10px;
+    width: 100%;
+    text-align: center;
+  }
+
+  footer {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .footer-nav {
+    width: 100%;
+    text-align: center;
+  }
+
+  .footer-nav li {
+    margin-right: 5px;
   }
 
   h3 {
